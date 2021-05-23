@@ -19,7 +19,7 @@ int main(int argc, char** argv)
 
 	glutInitWindowSize(window_width, window_height); //Tamanho janela
 	glutInitWindowPosition(100, 100);
-	glutCreateWindow("Transformations - Õcaro");
+	glutCreateWindow("Transformations - √çcaro");
 
 	//glutFullScreen();
 	glutReshapeFunc(tela);//configurar tela
@@ -52,12 +52,12 @@ void keyboard(unsigned char tecla,int x,int y)
 	if (tecla == '4')
 	{
 		trans = trans + 0.5;
-		printf("\nValor da translacao e %.2f\n", zoom);
+		printf("\nValor da translacao e %.2f\n", trans);
 	}
 	if (tecla == '5')
 	{
 		trans = trans - 0.5;
-		printf("\nValor da translacao e %.2f\n", zoom);
+		printf("\nValor da translacao e %.2f\n", trans);
 	}
 	if (tecla == '6')
 	{
