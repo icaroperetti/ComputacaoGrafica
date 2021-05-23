@@ -52,12 +52,12 @@ void keyboard(unsigned char tecla,int x,int y)
 	if (tecla == '4')
 	{
 		trans = trans + 0.5;
-		printf("\nValor do zoom e %.2f\n", zoom);
+		printf("\nValor da translacao e %.2f\n", zoom);
 	}
 	if (tecla == '5')
 	{
 		trans = trans - 0.5;
-		printf("\nValor do zoom e %.2f\n", zoom);
+		printf("\nValor da translacao e %.2f\n", zoom);
 	}
 	if (tecla == '6')
 	{
