@@ -16,8 +16,8 @@ int main(int argc, char** argv)
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB); //padrao de cores
 
 	glutInitWindowSize(window_width, window_height); //Tamanho janela
-	glutInitWindowPosition(100, 100); //PosiÁ„o da janela
-	glutCreateWindow("Õcaro - Push and Pop");
+	glutInitWindowPosition(100, 100); //Posi√ß√£o da janela
+	glutCreateWindow("√çcaro - Push and Pop");
 
 	//glutFullScreen();
 	glutReshapeFunc(tela);//configurar tela
@@ -30,10 +30,10 @@ int main(int argc, char** argv)
 void desenhar() {
 	GLfloat circ_pnt = 100;
 	GLfloat ang, raioX = 40.0f, raioY = 80.0f;
-
-	glPushMatrix();
-
 	GLfloat ballX = 80, ballY = 80;
+	
+	glPushMatrix();
+	
 	glTranslatef(-150, 0, 0);
 	glColor3f(1.0, 0.0, 1.0);
 	//Sorvete 1
