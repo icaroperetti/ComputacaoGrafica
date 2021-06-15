@@ -17,7 +17,7 @@ int main(int argc, char** argv) {
     // controla se o sistema operacional tem suporte a janelas
     glutInit(&argc, argv);
 
-    // quantidade de buffer de cores e que padr„o de cores È RGB ou RGBA
+    // quantidade de buffer de cores e que padr√£o de cores √© RGB ou RGBA
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 
     // tamanho da janela
@@ -47,7 +47,7 @@ void resize(GLsizei w, GLsizei h) {
     // evite divisao por zero
     if (h == 0)
         h = 1;
-    // Especifica as dimensıes do Viewport
+    // Especifica as dimens√µes do Viewport
     glViewport(0, 0, w, h);
 
     // inicializa os sistemas de cordernadas
@@ -102,9 +102,6 @@ void keyboard(int key, int x, int y) {
 }
 
 void display() {
-    glColor3f(red, green, blue);
-    glPointSize(50);
-    glEnable(GL_POINT_SMOOTH);
     glMatrixMode(GL_MODELVIEW);
     // LIMPAR toda a matriz
     glLoadIdentity();
@@ -119,6 +116,9 @@ void display() {
 
     if (check)
     {
+        glColor3f(red, green, blue);
+        glPointSize(50);
+        glEnable(GL_POINT_SMOOTH);
         glBegin(GL_POINTS); 
         glVertex2f(x, y);  
 
