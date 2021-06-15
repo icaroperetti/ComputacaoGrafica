@@ -9,7 +9,8 @@ void resize(GLsizei w, GLsizei h);
 void display(void);
 void mouse(int button, int state, int mousex, int mousey);
 
-float x, y,red,green,blue;
+float x=0,red,green,blue;
+float y = 0;
 
 bool check = false;
 
@@ -21,13 +22,13 @@ int main(int argc, char** argv) {
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 
     // tamanho da janela
-    glutInitWindowSize(400, 400);
+    glutInitWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
 
     // posicao inicial da janela
     glutInitWindowPosition(100, 100);
 
     // cria janela
-    glutCreateWindow("Mouse");
+    glutCreateWindow("Ícaro - Mouse");
 
     glutSpecialFunc(&keyboard);
 
@@ -75,7 +76,8 @@ void mouse(int button, int state, int mousex, int mousey)
         y = 400 - mousey;
        
     }
-    else {
+    else 
+    {
         check = false;
     }
 }
@@ -98,10 +100,16 @@ void keyboard(int key, int x, int y) {
         green = 1;
         blue = 1;
     }
+    if (key == GLUT_KEY_F4) {
+        red = 1;
+        green = 1;
+        blue = 1;
+    }
     glutPostRedisplay();
 }
 
 void display() {
+    
     glMatrixMode(GL_MODELVIEW);
     // LIMPAR toda a matriz
     glLoadIdentity();
@@ -116,11 +124,15 @@ void display() {
 
     if (check)
     {
+        
         glColor3f(red, green, blue);
         glPointSize(50);
         glEnable(GL_POINT_SMOOTH);
+
         glBegin(GL_POINTS); 
         glVertex2f(x, y);  
+
+        glPushMatrix();
 
         glEnd();
     }
