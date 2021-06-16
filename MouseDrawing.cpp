@@ -132,7 +132,7 @@ void display() {
         glBegin(GL_POINTS); 
         glVertex2f(x, y);  
 
-        glPushMatrix();
+        
 
         glEnd();
     }
