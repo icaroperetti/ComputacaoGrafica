@@ -153,5 +153,6 @@ void tela(GLsizei w, GLsizei h)
 
 float verifica() {
 	hipotenusa = sqrt((transx * transx) + (transy * transy));
+	printf("A hipotenusa e %f", hipotenusa);
 	return  hipotenusa;
 }
