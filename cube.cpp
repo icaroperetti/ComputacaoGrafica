@@ -78,7 +78,7 @@ void display()
 	glMatrixMode(GL_MODELVIEW); // operando com a camera de modelos
 
 	glLoadIdentity();
-	glTranslatef(-1.5f, 0.0f, -6.0f); // posiciona a piramide
+	glTranslatef(-1.5f, 0.0f, -6.0f); 
 	glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambiente);
 	glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_diffuse);
 	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
