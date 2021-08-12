@@ -78,7 +78,7 @@ void display()
 	glMatrixMode(GL_MODELVIEW); // operando com a camera de modelos
 
 	glLoadIdentity();
-	glTranslatef(-1.5f, 0.0f, -6.0f); 
+	glTranslatef(-1.5f, 0.0f, -6.0f); // posiciona a piramide
 	glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambiente);
 	glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_diffuse);
 	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
@@ -90,6 +90,7 @@ void display()
 	glPushMatrix();
 	
 	glTranslatef(3.5f, 0.0f, -3.0f);
+	glRotatef(100.0, 100,0,0);
 	glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambiente);
 	glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_diffuse);
 	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
@@ -141,6 +142,7 @@ void keyboard(unsigned char key, int a, int b)
 {
 	switch (key) {
 	case 'c':
+		x = x + 10;
 		mudaCor();
 		glutPostRedisplay();
 		break;
@@ -159,6 +161,7 @@ void keyboard(unsigned char key, int a, int b)
 		glutPostRedisplay();
 		break;
 	default:
-		printf("Erro, caracter invalido");
+		printf("Erro, letra invalida");
 	}
 }
+
