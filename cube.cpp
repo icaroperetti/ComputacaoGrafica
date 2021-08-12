@@ -159,6 +159,6 @@ void keyboard(unsigned char key, int a, int b)
 		glutPostRedisplay();
 		break;
 	default:
-		printf("Erro");
+		printf("Erro, caracter invalido");
 	}
 }
